@@ -1,6 +1,9 @@
-// Capturando o botão Iniciar
+// Capturando os botões
 const btnStart = document.getElementById('btn-start');
+const btnReset = document.getElementById('btn-reset');
+const btnPause = document.getElementById('btn-pause');
 
+// Adicionando o evento de clique ao botão Iniciar
 btnStart.addEventListener('click', () => {
    // Capturando hora, minuto e segundo
    const hours = document.getElementById('hour');
@@ -46,5 +49,24 @@ const timer = (duration, display) => {
          display.innerHTML = 'ACABOU!!!'
          clearInterval(interval);
       }
+
+      // Adicionando o evento de clique ao botão Zerar
+      btnReset.addEventListener('click', () => {
+         // Capturando hora, minuto e segundo
+         const hours0 = document.getElementById('hour');
+         const minutes0 = document.getElementById('minute');
+         const seconds0 = document.getElementById('second');
+
+         // Resetando os valores dos inputs
+         hours0.value = '00';
+         minutes0.value = '00';
+         seconds0.value = '00';
+
+         // Resetando o display do timer
+         display0 =  document.getElementById('timer');
+         display0.innerHTML = '00:00:00';
+         clearInterval(interval);
+
+      });
    }, 1000);
 }

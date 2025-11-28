@@ -39,6 +39,12 @@ button:hover {
   justify-content: center;
 }
 
+.align-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
 .btn {
   text-align: center;
 }
